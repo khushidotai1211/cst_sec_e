@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Map Explorer</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f0f8ff; margin:0; padding: 20px; }
+        h1 { background: #002366; color: white; padding: 15px; margin:0; }
+        .container { background: white; max-width: 1000px; margin: 20px auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+        img { max-width: 100%; border: 2px solid #333; }
+        .info { text-align: left; background: #eef; padding: 15px; margin-top:20px; border-radius: 5px;}
+        code { background: #ddd; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+
+<h1>WORLD MAP EXPLORER</h1>
+
+<div class="container">
+    <h2>Click on any country to explore!</h2>
+    <p>Using HTML Image Maps - <code>&lt;img&gt;, &lt;map&gt;, &lt;area&gt;</code></p>
+
+    <!-- Image Map -->
+    <img src="worldmap.jpg" alt="World Map" usemap="#worldmap" width="1000">
+
+    <map name="worldmap">
+        <!-- 1. RECT - for USA (Rectangular region) -->
+        <area shape="rect" 
+              coords="80,120,280,280" 
+              href="https://en.wikipedia.org/wiki/United_States" 
+              alt="USA - Click to know about United States" 
+              target="_blank"
+              title="USA">
+
+        
+        <area shape="circle" 
+              coords="680,350,35" 
+              href="https://en.wikipedia.org/wiki/India" 
+              alt="India - Click to know about India" 
+              target="_blank"
+              title="India">
+
+        <area shap="rect"
+              coords="810,550,50" 
+              href="https://en.wikipedia.org/wiki/Australia" 
+              alt="Australia - Click to know about Australia" 
+              target="_blank"
+              title="Australia">
+
+    
+        <area shape="poly" 
+              coords="260,380,310,370,340,400,330,460,300,480,260,430" 
+              href="https://en.wikipedia.org/wiki/Brazil" 
+              alt="Brazil - Click to know about Brazil" 
+              target="_blank"
+              title="Brazil">
+
+        
+        <area shape="poly" 
+              coords="480,360,560,360,580,480,540,580,490,500" 
+              href="https://en.wikipedia.org/wiki/Africa" 
+              alt="Africa - Click to know about Africa" 
+              target="_blank"
+              title="Africa">
+
+        
+        <area shape="default" 
+              href="https://en.wikipedia.org/wiki/World_map" 
+              alt="World Map - Default Area" 
+              target="_blank"
+              title="Default - World Map">
+    </map>
+
+    <div class="info">
+        <h3>How Image Map Works (As per assignment):</h3>
+        <ul style="text-align:left;">
+            <li><b>rect</b> - for a rectangular region - Used for <b>USA</b> - coords="x1,y1,x2,y2"</li>
+            <li><b>circle</b> - for a circular region - Used for <b>India & Australia</b> - coords="x,y,radius"</li>
+            <li><b>poly</b> - for an irregular/polygon-shaped region - Used for <b>Brazil & Africa</b> - coords="x1,y1,x2,y2,x3,y3..."</li>
+            <li><b>default</b> - for the remaining area (Ocean) - Opens World Map page</li>
+        </ul>
+        <p>All links have <code>target="_blank"</code> so they open in a new tab, and <code>alt</code> attribute for description.</p>
+    </div>
+</div>
+
+</body>
+</html>
